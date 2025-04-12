@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDUCARE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #f0f4f8, #c9e9ff);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Title styling */
+        .title {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 40px;
+            color: #4a90e2;
+            font-weight: 700;
+            animation: fadeIn 2s;
+        }
+
+        /* Image container with transparency and curved bottom */
+        .image-container {
+            width: 100%;
+            height: 70vh; /* Adjust height as needed for the rectangle */
+            background: url('https://scontent.fmaa2-2.fna.fbcdn.net/v/t39.30808-6/459980444_8291138657640643_76529247755174120_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=_lezU_jb1SQQ7kNvgE74PTg&_nc_zt=23&_nc_ht=scontent.fmaa2-2.fna&_nc_gid=AKPiwW6RONOaSGXwThnbA7u&oh=00_AYB0BcHARFrA1L3Qxv9PJnTDUk0Tj32gsy9Ow6ytBj6NNQ&oe=67257FE0') no-repeat center center; /* Placeholder image */
+            background-size: cover;
+            position: relative;
+            border-bottom-left-radius: 1400px; /* Adjust for desired curve */
+            border-bottom-right-radius: 1400px; /* Adjust for desired curve */
+            opacity: 0.95; /* Add transparency */
+            margin-top: 60px; /* Space below the title */
+        }
+
+        /* Button styles */
+        .button {
+            background-color: #4a90e2;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            margin: 10px;
+        }
+
+        /* Button hover effect */
+        .button:hover {
+            background-color: #357ab8;
+            transform: translateY(-5px);
+        }
+
+        /* Keyframes for fading in the title */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Flex container for buttons */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative; /* Relative positioning for proper alignment */
+            z-index: 1; /* Ensure buttons are above the image */
+            margin-top: -140px; /* Adjust as needed to overlap with the image */
+        }
+
+        /* Menu bar styling */
+        .menu-bar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+
+        /* Menu item styling */
+        .menu-item {
+            margin: 10px 0;
+            text-decoration: none;
+            color: #4a90e2;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        /* Menu item hover effect */
+        .menu-item:hover {
+            color: #357ab8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">EDUCARE</div>
+
+    <div class="image-container"></div>
+
+    <div class="button-container">
+        <button class="button" onclick="alert('Take Attendance button clicked')">Take Attendance</button>
+        <button class="button" onclick="alert('New User button clicked')">New User</button>
+    </div>
+
+    <!-- Menu bar -->
+    <div class="menu-bar">
+        <a href="#" class="menu-item">Home</a>
+        <a href="#" class="menu-item">About</a>
+        <a href="#" class="menu-item">Contact</a>
+    </div>
+
+</body>
+</html>
